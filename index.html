@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Task Reminder</h1>
+    <div class="wrapContainer">
+        <div class="filteringContainer">
+            <div class="addTaskContainer">
+                <form id="add-task-form">
+                    <h2 style="margin-top: 10px; text-align:center;">Add task</h2>
+                    <div class="form-group">
+                        <input id="title" class="text-field" type="text" placeholder="Title" required>
+                    </div>
+                    <div class="form-group">
+                        <input id="duetime" class="text-field" type="number" step="0.1" placeholder="Due time" required>
+                    </div>
+                    <div class="form-group">
+                        <input id="priority" class="text-field" type="text" placeholder="Priority" required>
+                    </div>
+                    <button type="submit" class="submit-button">Add</button>
+                </form>
+            </div>
+            <div class="sortTask">
+                <button class="sort-button">Sort task according to priority</button>
+            </div>
+            <div class="dueTaskInContainer">
+                <form id="due-task-form">
+                    <div class="form-group">
+                        <input id="due" class="text-field" type="text" placeholder="Due task within.." required>
+                    </div>
+                    <button type="submit" class="display-button">Display</button>
+                </form>
+            </div>
+        </div>
+        <div class="displayContainer">
+            <h3>Results</h3>        
+            <div class="taskListContainer" id="taskListContainer"></div>
+            <h3>Reminders</h3>        
+            <div class="taskReminderContainer" id="taskReminderContainer"></div>
+        </div> 
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
